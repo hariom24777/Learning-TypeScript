@@ -1,4 +1,3 @@
-import "./App.css";
 import { CoffeeCard } from "./components/CoffeeCard.tsx";
 import { Counter } from "./components/Counter.tsx";
 import CoffeeList from "./components/CoffeeList.tsx";
@@ -16,7 +15,7 @@ function App() {
   return (
     <>
       <section>
-        <h1>React</h1>
+        <h1>Coffee with React & TypeScript</h1>
         <CoffeeCard name="Cappuccino" price={389} />
         <CoffeeCard name="Espresso" price={349} />
         <div>

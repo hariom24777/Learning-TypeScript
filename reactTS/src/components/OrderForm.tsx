@@ -13,23 +13,26 @@ export function OrderForm({ onSubmit }: OrderFormProps) {
     onSubmit({ name, cups });
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Coffee Name</label>
-      <input
-        value={name}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          setName(e.target.value);
-        }}
-      />
-      <label>Cups</label>
-      <input
-        type="number"
-        value={cups}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          setCups(Number(e.target.value) || 0);
-        }}
-      />
-
+    <form className="formContainer" onSubmit={handleSubmit}>
+      <div className="formField">
+        <label>Coffee Name</label>
+        <input
+          value={name}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setName(e.target.value);
+          }}
+        />
+      </div>
+      <div className="formField">
+        <label>Cups</label>
+        <input
+          type="number"
+          value={cups}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setCups(Number(e.target.value) || 0);
+          }}
+        />
+      </div>
       <button type="submit">Place Order</button>
     </form>
   );
